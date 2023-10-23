@@ -130,6 +130,9 @@ type Node struct {
 	// have been applied. (See Cluster.KubeadmConfigPatches)
 	KubeadmConfigPatches []string `yaml:"kubeadmConfigPatches,omitempty" json:"kubeadmConfigPatches,omitempty"`
 
+	// Gpus passes GPUs through to the node
+	Gpus bool `yaml:"gpus,omitempty"`
+
 	// KubeadmConfigPatchesJSON6902 are applied to the generated kubeadm config
 	// as JSON 6902 patches. The `kind` field must match the target object, and
 	// if group or version are specified it will only be objects matching the
